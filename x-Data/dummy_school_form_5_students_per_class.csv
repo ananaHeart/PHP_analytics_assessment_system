@@ -1,0 +1,26 @@
+LRN,First Name,Last Name,Gender,Grade,Section
+100000000001,Juan,Dela Cruz,male,Grade 7,Aguinaldo
+100000000002,Maria,Santos,female,Grade 7,Aguinaldo
+100000000003,Pedro,Penduko,male,Grade 7,Aguinaldo
+100000000004,Ana,Reyes,female,Grade 7,Aguinaldo
+100000000005,Jose,Protacio,male,Grade 7,Aguinaldo
+200000000001,Ricardo,Dalisay,male,Grade 8,Bonifacio
+200000000002,Alyana,Arevalo,female,Grade 8,Bonifacio
+200000000003,Cardo,Dalisay,male,Grade 8,Bonifacio
+200000000004,Flora,Borja,female,Grade 8,Bonifacio
+200000000005,Benny,Sarmenta,male,Grade 8,Bonifacio
+300000000001,Jose,Rizal,male,Grade 9,Mabini
+300000000002,Leonor,Rivera,female,Grade 9,Mabini
+300000000003,Andres,Bonifacio,male,Grade 9,Mabini
+300000000004,Gregoria,De Jesus,female,Grade 9,Mabini
+300000000005,Apolinario,Mabini,male,Grade 9,Mabini
+400000000001,Ferdinand,Marcos,male,Grade 10,Luna
+400000000002,Imelda,Marcos,female,Grade 10,Luna
+400000000003,Cory,Aquino,female,Grade 10,Luna
+400000000004,Benigno,Aquino,male,Grade 10,Luna
+400000000005,Gloria,Arroyo,female,Grade 10,Luna
+500000000001,Vic,Sotto,male,Grade 11,Del Pilar
+500000000002,Pauleen,Luna,female,Grade 11,Del Pilar
+500000000003,Joey,De Leon,male,Grade 11,Del Pilar
+500000000004,Eileen,Macapagal,female,Grade 11,Del Pilar
+500000000005,Tito,Sotto,male,Grade 11,Del Pilar

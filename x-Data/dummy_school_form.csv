@@ -1,0 +1,101 @@
+LRN,First Name,Last Name,Gender,Grade,Section
+100000000001,Juan,Dela Cruz,male,Grade 7,Aguinaldo
+100000000002,Maria,Santos,female,Grade 7,Aguinaldo
+100000000003,Pedro,Penduko,male,Grade 7,Aguinaldo
+100000000004,Ana,Reyes,female,Grade 7,Aguinaldo
+100000000005,Jose,Protacio,male,Grade 7,Aguinaldo
+100000000006,Liza,Soberano,female,Grade 7,Aguinaldo
+100000000007,Enrique,Gil,male,Grade 7,Aguinaldo
+100000000008,Kathryn,Bernardo,female,Grade 7,Aguinaldo
+100000000009,Daniel,Padilla,male,Grade 7,Aguinaldo
+100000000010,Nadine,Lustre,female,Grade 7,Aguinaldo
+100000000011,James,Reid,male,Grade 7,Aguinaldo
+100000000012,Vice,Ganda,male,Grade 7,Aguinaldo
+100000000013,Anne,Curtis,female,Grade 7,Aguinaldo
+100000000014,Vhong,Navarro,male,Grade 7,Aguinaldo
+100000000015,Karylle,Tatlonghari,female,Grade 7,Aguinaldo
+100000000016,Billy,Crawford,male,Grade 7,Aguinaldo
+100000000017,Coleen,Garcia,female,Grade 7,Aguinaldo
+100000000018,Luis,Manzano,male,Grade 7,Aguinaldo
+100000000019,Jessy,Mendiola,female,Grade 7,Aguinaldo
+100000000020,Piolo,Pascual,male,Grade 7,Aguinaldo
+200000000001,Ricardo,Dalisay,male,Grade 8,Bonifacio
+200000000002,Alyana,Arevalo,female,Grade 8,Bonifacio
+200000000003,Cardo,Dalisay,male,Grade 8,Bonifacio
+200000000004,Flora,Borja,female,Grade 8,Bonifacio
+200000000005,Benny,Sarmenta,male,Grade 8,Bonifacio
+200000000006,Glen,Corpuz,female,Grade 8,Bonifacio
+200000000007,Joaquin,Tuazon,male,Grade 8,Bonifacio
+200000000008,Monica,Salazar,female,Grade 8,Bonifacio
+200000000009,Adrian,Alcantara,male,Grade 8,Bonifacio
+200000000010,Nicole,Esquivel,female,Grade 8,Bonifacio
+200000000011,Max,Saavedra,male,Grade 8,Bonifacio
+200000000012,Ivy,Aguas,female,Grade 8,Bonifacio
+200000000013,Arnaldo,Ardiente,male,Grade 8,Bonifacio
+200000000014,Emilia,Ardiente,female,Grade 8,Bonifacio
+200000000015,Julio,Ardiente,male,Grade 8,Bonifacio
+200000000016,Camia,Cruz,female,Grade 8,Bonifacio
+200000000017,Diego,Torillo,male,Grade 8,Bonifacio
+200000000018,Lily,Cruz,female,Grade 8,Bonifacio
+200000000019,Raul,Torillo,male,Grade 8,Bonifacio
+200000000020,Maja,Salvador,female,Grade 8,Bonifacio
+300000000001,Jose,Rizal,male,Grade 9,Mabini
+300000000002,Leonor,Rivera,female,Grade 9,Mabini
+300000000003,Andres,Bonifacio,male,Grade 9,Mabini
+300000000004,Gregoria,De Jesus,female,Grade 9,Mabini
+300000000005,Apolinario,Mabini,male,Grade 9,Mabini
+300000000006,Melchora,Aquino,female,Grade 9,Mabini
+300000000007,Emilio,Aguinaldo,male,Grade 9,Mabini
+300000000008,Gabriela,Silang,female,Grade 9,Mabini
+300000000009,Marcelo,Del Pilar,male,Grade 9,Mabini
+300000000010,Teresa,Magbanua,female,Grade 9,Mabini
+300000000011,Juan,Luna,male,Grade 9,Mabini
+300000000012,Agueda,Esteban,female,Grade 9,Mabini
+300000000013,Antonio,Luna,male,Grade 9,Mabini
+300000000014,Trinidad,Tecson,female,Grade 9,Mabini
+300000000015,Graciano,Lopez Jaena,male,Grade 9,Mabini
+300000000016,Marina,Dizon,female,Grade 9,Mabini
+300000000017,Emilio,Jacinto,male,Grade 9,Mabini
+300000000018,Delfina,Herbosa,female,Grade 9,Mabini
+300000000019,Macario,Sakay,male,Grade 9,Mabini
+300000000020,Patrocinio,Gamboa,female,Grade 9,Mabini
+400000000001,Ferdinand,Marcos,male,Grade 10,Luna
+400000000002,Imelda,Marcos,female,Grade 10,Luna
+400000000003,Cory,Aquino,female,Grade 10,Luna
+400000000004,Benigno,Aquino,male,Grade 10,Luna
+400000000005,Gloria,Arroyo,female,Grade 10,Luna
+400000000006,Joseph,Estrada,male,Grade 10,Luna
+400000000007,Fidel,Ramos,male,Grade 10,Luna
+400000000008,Miriam,Defensor,female,Grade 10,Luna
+400000000009,Rodrigo,Duterte,male,Grade 10,Luna
+400000000010,Sara,Duterte,female,Grade 10,Luna
+400000000011,Bongbong,Marcos,male,Grade 10,Luna
+400000000012,Leni,Robredo,female,Grade 10,Luna
+400000000013,Manny,Pacquiao,male,Grade 10,Luna
+400000000014,Jinkee,Pacquiao,female,Grade 10,Luna
+400000000015,Isko,Moreno,male,Grade 10,Luna
+400000000016,Risa,Hontiveros,female,Grade 10,Luna
+400000000017,Alan,Cayetano,male,Grade 10,Luna
+400000000018,Pia,Cayetano,female,Grade 10,Luna
+400000000019,Grace,Poe,female,Grade 10,Luna
+400000000020,Chiz,Escudero,male,Grade 10,Luna
+500000000001,Vic,Sotto,male,Grade 11,Del Pilar
+500000000002,Pauleen,Luna,female,Grade 11,Del Pilar
+500000000003,Joey,De Leon,male,Grade 11,Del Pilar
+500000000004,Eileen,Macapagal,female,Grade 11,Del Pilar
+500000000005,Tito,Sotto,male,Grade 11,Del Pilar
+500000000006,Helen,Gamboa,female,Grade 11,Del Pilar
+500000000007,Wally,Bayola,male,Grade 11,Del Pilar
+500000000008,Maine,Mendoza,female,Grade 11,Del Pilar
+500000000009,Alden,Richards,male,Grade 11,Del Pilar
+500000000010,AiAi,Delas Alas,female,Grade 11,Del Pilar
+500000000011,Allan,K,male,Grade 11,Del Pilar
+500000000012,Ryzza,Mae,female,Grade 11,Del Pilar
+500000000013,Paolo,Ballesteros,male,Grade 11,Del Pilar
+500000000014,Ruby,Rodriguez,female,Grade 11,Del Pilar
+500000000015,Ryan,Agoncillo,male,Grade 11,Del Pilar
+500000000016,Judy,Ann,female,Grade 11,Del Pilar
+500000000017,Bamboo,Mañalac,male,Grade 11,Del Pilar
+500000000018,Sarah,Geronimo,female,Grade 11,Del Pilar
+500000000019,Regine,Velasquez,female,Grade 11,Del Pilar
+500000000020,Ogie,Alcasid,male,Grade 11,Del Pilar

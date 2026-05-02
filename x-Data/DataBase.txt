@@ -1,0 +1,171 @@
+CREATE DATABASE IF NOT EXISTS assessment_db;
+USE assessment_db;
+
+-- 1. User Table
+CREATE TABLE user (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(30),
+    last_name VARCHAR(30),
+    gender ENUM('male', 'female'),
+    date_birth DATE,
+    email VARCHAR(80) UNIQUE,
+    password VARCHAR(255),
+    role ENUM('principal', 'teacher'),
+    status ENUM('pending', 'active') DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 2. Academic Year
+CREATE TABLE academic_year (
+    academic_year_id INT PRIMARY KEY AUTO_INCREMENT,
+    year_name VARCHAR(15),
+    start_date DATE,
+    end_date DATE,
+    status ENUM('Active', 'Completed')
+);
+
+-- 3. Grade Level
+CREATE TABLE grade_level (
+    grade_level_id INT PRIMARY KEY AUTO_INCREMENT,
+    grade_level_name VARCHAR(20)
+);
+
+-- 4. Section
+CREATE TABLE section (
+    section_id INT PRIMARY KEY AUTO_INCREMENT,
+    grade_level_id INT,
+    section_name VARCHAR(50),
+    FOREIGN KEY (grade_level_id) REFERENCES grade_level(grade_level_id) ON DELETE CASCADE
+);
+
+-- 5. Subject
+CREATE TABLE subject (
+    subject_id INT PRIMARY KEY AUTO_INCREMENT,
+    subject_code VARCHAR(20),
+    subject_name VARCHAR(30)
+);
+
+-- 6. Curriculum (Links Grade Level to Subject)
+CREATE TABLE curriculum (
+    curriculum_id INT PRIMARY KEY AUTO_INCREMENT,
+    grade_level_id INT,
+    subject_id INT,
+    FOREIGN KEY (grade_level_id) REFERENCES grade_level(grade_level_id),
+    FOREIGN KEY (subject_id) REFERENCES subject(subject_id)
+);
+
+-- 7. Competency Tags (New Table)
+CREATE TABLE competency_tags (
+    competency_id INT PRIMARY KEY AUTO_INCREMENT,
+    curriculum_id INT,
+    competency_name VARCHAR(50),
+    FOREIGN KEY (curriculum_id) REFERENCES curriculum(curriculum_id)
+);
+
+-- 8. Student
+CREATE TABLE student (
+    student_id INT PRIMARY KEY AUTO_INCREMENT,
+    student_LRN VARCHAR(12) UNIQUE,
+    first_name VARCHAR(30),
+    last_name VARCHAR(30),
+    gender ENUM('male', 'female')
+);
+
+-- 9. Student Enrollment
+CREATE TABLE student_enrollment (
+    student_enrollment_id INT PRIMARY KEY AUTO_INCREMENT,
+    student_id INT,
+    section_id INT,
+    academic_year_id INT,
+    FOREIGN KEY (student_id) REFERENCES student(student_id),
+    FOREIGN KEY (section_id) REFERENCES section(section_id),
+    FOREIGN KEY (academic_year_id) REFERENCES academic_year(academic_year_id)
+);
+
+-- 10. Class (The Teacher's Assignment)
+CREATE TABLE class (
+    class_id INT PRIMARY KEY AUTO_INCREMENT,
+    academic_year_id INT,
+    user_id INT,
+    subject_id INT,
+    section_id INT,
+    FOREIGN KEY (academic_year_id) REFERENCES academic_year(academic_year_id),
+    FOREIGN KEY (user_id) REFERENCES user(user_id),
+    FOREIGN KEY (subject_id) REFERENCES subject(subject_id),
+    FOREIGN KEY (section_id) REFERENCES section(section_id)
+);
+
+-- 11. Test
+CREATE TABLE test (
+    test_id INT PRIMARY KEY AUTO_INCREMENT,
+    class_id INT,
+    test_name VARCHAR(50),
+    test_type ENUM('Quiz', 'Exam', 'Diagnostic', 'Long Test'),
+    test_date DATE,
+    FOREIGN KEY (class_id) REFERENCES class(class_id)
+);
+
+-- 12. Test Part
+CREATE TABLE test_part (
+    test_part_id INT PRIMARY KEY AUTO_INCREMENT,
+    test_id INT,
+    competency_id INT, -- Linked to the new competency table
+    part_order VARCHAR(15),
+    part_type TEXT,
+    number_of_items INT,
+    points_per_item INT,
+    answer_key TEXT,
+    FOREIGN KEY (test_id) REFERENCES test(test_id) ON DELETE CASCADE,
+    FOREIGN KEY (competency_id) REFERENCES competency_tags(competency_id)
+);
+
+-- 13. Test Result (With Mobile Support)
+CREATE TABLE test_result (
+    test_result_id INT PRIMARY KEY AUTO_INCREMENT,
+    test_id INT,
+    student_id INT,
+    mobile_uuid VARCHAR(100) UNIQUE, -- For React Native Sync
+    total_score INT,
+    raw_answers TEXT,
+    checked_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (test_id) REFERENCES test(test_id),
+    FOREIGN KEY (student_id) REFERENCES student(student_id)
+);
+
+-- 14. Test Item Result (New Table for detailed Analysis)
+CREATE TABLE test_item_result (
+    item_result_id INT PRIMARY KEY AUTO_INCREMENT,
+    test_part_id INT,
+    test_result_id INT,
+    item_number INT,
+    is_correct BOOLEAN,
+    FOREIGN KEY (test_part_id) REFERENCES test_part(test_part_id),
+    FOREIGN KEY (test_result_id) REFERENCES test_result(test_result_id) ON DELETE CASCADE
+);
+
+-- 15. Sync Log (New Table for Mobile Tracking)
+CREATE TABLE sync_log (
+    sync_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    sync_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    sync_status ENUM('Success', 'Failed'),
+    FOREIGN KEY (user_id) REFERENCES user(user_id)
+);
+
+
+
+
+
+INSERT INTO user (first_name, last_name, gender, date_birth, email, password, role, status) 
+VALUES (
+    'Admin', 
+    'Principal', 
+    'male', 
+    '1980-01-01', 
+    'admin@school.edu.ph', 
+    '$2a$12$nZ76jzKHhsd.hPx5K/78YucxCPHK4O8VNSRp3mLI8gD52v4qqKAUG', 
+    'principal', 
+    'active'
+);
+// Password: password123
