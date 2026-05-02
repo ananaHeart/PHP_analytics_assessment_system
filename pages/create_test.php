@@ -26,6 +26,7 @@ $classes = $conn->query("
 <head>
     <meta charset="UTF-8">
     <title>Create Assessment - SMART</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
     <link rel="stylesheet" href="/assessment_system/assets/css/style.css?v=<?php echo time(); ?>">
     <style>
         .form-group { margin-bottom: 20px; display: flex; flex-direction: column; }
@@ -37,8 +38,9 @@ $classes = $conn->query("
 <body class="teacher-layout">
 
     <nav class="top-nav">
-        <div style="font-weight:800; font-size:18px;">
-            <span style="color:var(--primary-green);">🎓</span> SMART Assessment System
+        <div class="brand-lockup" style="font-weight:800; font-size:18px;">
+            <img src="../assets/img/smart-logo.svg" alt="SMART Assessment System" class="brand-logo">
+            <span>SMART Assessment System</span>
         </div>
         <a href="<?php echo $class_id > 0 ? "view_tests.php?class_id=" . $class_id : "dashboard_teacher.php"; ?>" style="color:var(--text-gray); text-decoration:none; font-weight:600;">← Back to Assessments</a>
     </nav>

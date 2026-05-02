@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - SMART Assessment System</title>
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
         body { display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background-color: #F4F7F9; }
@@ -26,7 +26,7 @@
 <body>
 
 <div class="login-card">
-    <div class="logo-circle"><img src="../assets/img/smart-logo.png" alt="SMART Assessment System" class="brand-logo"></div>
+    <div class="logo-circle"><img src="../assets/img/smart-logo.svg" alt="SMART Assessment System" class="brand-logo"></div>
     <h2>SMART Assessment System</h2>
     <p class="subtitle">Please enter your credentials to continue</p>
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Sign Up - SMART</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
         body { display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 20px 0; background-color: #F4F7F9; }

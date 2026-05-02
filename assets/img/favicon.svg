@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="faviconTitle faviconDesc">
+<title id="faviconTitle">SMART Assessment System favicon</title>
+<desc id="faviconDesc">Graduation cap icon</desc>
+<path d="M4 24 32 12l28 12-28 12L4 24Z" fill="#ffffff" stroke="#2f8f43" stroke-linejoin="round" stroke-width="3"/>
+<path d="M16 30v8c0 4.97 7.16 9 16 9s16-4.03 16-9v-8" fill="none" stroke="#2f8f43" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+<path d="M52 28v11.5" fill="none" stroke="#3acf49" stroke-linecap="round" stroke-width="3"/>
+<circle cx="52" cy="43" r="3.5" fill="#3acf49"/>
+</svg>

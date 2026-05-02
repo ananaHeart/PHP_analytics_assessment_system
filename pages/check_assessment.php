@@ -282,7 +282,7 @@ if ($selected_student_id > 0) {
 <head>
     <meta charset="UTF-8">
     <title>Check Assessment Scores - SMART</title>
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
     <link rel="stylesheet" href="../assets/css/style.css?v=<?php echo time(); ?>">
     <style>
         body.teacher-layout { background: #f5f6fa; }
@@ -344,7 +344,7 @@ if ($selected_student_id > 0) {
 
 <nav class="top-nav">
     <div class="brand-lockup" style="font-weight:800; font-size:18px;">
-        <img src="../assets/img/smart-logo.png" alt="SMART Assessment System" class="brand-logo">
+        <img src="../assets/img/smart-logo.svg" alt="SMART Assessment System" class="brand-logo">
         <span>SMART Assessment System</span>
     </div>
     <a href="view_tests.php?class_id=<?php echo $class_id; ?>" style="color:var(--text-gray); text-decoration:none; font-weight:600;">← Back to View Assessments</a>

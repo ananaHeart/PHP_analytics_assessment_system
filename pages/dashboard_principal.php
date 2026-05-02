@@ -58,7 +58,7 @@ $msg = $_GET['assign'] ?? $_GET['msg'] ?? null;
 <head>
     <meta charset="UTF-8">
     <title>Principal Dashboard - SMART</title>
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
     <!-- Use the external CSS we made -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>

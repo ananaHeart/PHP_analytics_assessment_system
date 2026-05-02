@@ -11,7 +11,7 @@ function nav_is_active($current_page, $pages) {
 <div class="sidebar">
     <div class="logo-section">
         <div class="logo-mark">
-            <img src="../assets/img/smart-logo.png" alt="SMART Assessment System" class="brand-logo">
+            <img src="../assets/img/smart-logo.svg" alt="SMART Assessment System" class="brand-logo">
         </div>
         <span>SMART <br><small>ASSESSMENT SYSTEM</small></span>
     </div>

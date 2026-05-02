@@ -19,6 +19,7 @@ body {
     height: 32px;
     object-fit: contain;
     display: block;
+    flex-shrink: 0;
 }
 
 .brand-lockup {

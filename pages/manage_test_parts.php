@@ -60,6 +60,7 @@ $part_count = count($parts);
 <head>
     <meta charset="UTF-8">
     <title>Manage Test Parts - SMART</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
         .grid-builder { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; margin-top: 15px; background: #F8FAFC; padding: 20px; border-radius: 12px; }
@@ -81,7 +82,10 @@ $part_count = count($parts);
 <body class="teacher-layout">
 
     <nav class="top-nav">
-        <div style="font-weight:800; font-size:18px;"><span style="color:var(--primary-green);">🎓</span> SMART Assessment</div>
+        <div class="brand-lockup" style="font-weight:800; font-size:18px;">
+            <img src="../assets/img/smart-logo.svg" alt="SMART Assessment System" class="brand-logo">
+            <span>SMART Assessment System</span>
+        </div>
         <a href="view_tests.php?class_id=<?php echo $class_id; ?>" style="color:var(--text-gray); text-decoration:none; font-weight:600;">← Back to Assessment List</a>
     </nav>
 
