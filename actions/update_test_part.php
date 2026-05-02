@@ -47,5 +47,6 @@ if ($update_stmt->execute()) {
     exit();
 }
 
-die('Failed to update test part.');
+header('Location: ../pages/manage_test_parts.php?test_id=' . $test_id . '&msg=error');
+exit();
 ?>

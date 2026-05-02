@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
     if ($conn->query($sql)) {
         header("Location: ../pages/assign_class.php?msg=deleted");
     } else {
-        echo "Error deleting assignment: " . $conn->error;
+        header("Location: ../pages/assign_class.php?msg=error");
     }
 } else {
     header("Location: ../pages/assign_class.php");

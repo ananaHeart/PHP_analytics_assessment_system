@@ -82,6 +82,7 @@ if ($update_stmt->execute()) {
     exit();
 }
 
-echo "Error: " . $conn->error;
+header("Location: ../pages/edit_test.php?test_id=" . $test_id . "&msg=error");
+exit();
 ?>
 

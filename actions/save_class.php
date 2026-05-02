@@ -12,7 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $ay = $ay_query->fetch_assoc();
     
     if (!$ay) {
-        die("Error: No Active Academic Year found.");
+        header("Location: ../pages/assign_class.php?msg=error");
+        exit();
     }
     $ay_id = $ay['academic_year_id'];
 
@@ -29,7 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($conn->query($sql)) {
         header("Location: ../pages/assign_class.php?msg=success");
     } else {
-        echo "Error: " . $conn->error;
+        header("Location: ../pages/assign_class.php?msg=error");
+        exit();
     }
 }
 ?>

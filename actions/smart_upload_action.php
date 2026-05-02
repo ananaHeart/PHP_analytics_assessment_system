@@ -8,7 +8,8 @@ if (isset($_POST['upload_btn'])) {
 
     $ay_id = get_active_academic_year_id($conn);
     if ($ay_id <= 0) {
-        die("Error: No Active Academic Year found. Please add one in the database first.");
+        header("Location: ../pages/smart_import.php?upload=missing_year");
+        exit();
     }
 
     if ($file === '' || !is_uploaded_file($file)) {
@@ -88,7 +89,8 @@ if (isset($_POST['upload_btn'])) {
         } catch (Throwable $e) {
             fclose($handle);
             $conn->rollback();
-            die("Upload failed: " . $e->getMessage());
+            header("Location: ../pages/smart_import.php?upload=failed");
+            exit();
         }
     }
 }

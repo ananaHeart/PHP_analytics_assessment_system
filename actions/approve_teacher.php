@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
         // FIXED: Redirect to manage_teachers.php instead of sections.php
         header("Location: ../pages/manage_teachers.php?msg=approved");
     } else {
-        echo "Error: " . $conn->error;
+        header("Location: ../pages/manage_teachers.php?msg=error");
     }
     exit();
 }

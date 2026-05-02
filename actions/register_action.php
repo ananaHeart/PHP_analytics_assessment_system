@@ -12,7 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Check if email already exists
     $check_email = $conn->query("SELECT user_id FROM user WHERE email = '$email'");
     if ($check_email->num_rows > 0) {
-        die("Error: Email is already registered.");
+        header("Location: ../pages/register.php?error=exists");
+        exit();
     }
 
     // Role is hardcoded as 'teacher', status as 'pending'
@@ -22,7 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($conn->query($sql)) {
         header("Location: ../pages/login.php?msg=registered_pending");
     } else {
-        echo "Error: " . $conn->error;
+        header("Location: ../pages/register.php?error=failed");
+        exit();
     }
 }
 ?>

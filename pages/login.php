@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - SMART Assessment System</title>
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
         body { display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background-color: #F4F7F9; }
         .login-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); width: 100%; max-width: 400px; text-align: center; }
-        .logo-circle { width: 60px; height: 60px; background: #EBFBEE; color: var(--primary-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 20px; }
+        .logo-circle { width: 72px; height: 72px; background: #EBFBEE; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+        .logo-circle .brand-logo { width: 42px; height: 42px; }
         h2 { margin-bottom: 5px; color: #2C3E50; }
         p.subtitle { color: #718096; font-size: 14px; margin-bottom: 30px; }
         .input-group { position: relative; margin-bottom: 20px; text-align: left; }
@@ -24,7 +26,7 @@
 <body>
 
 <div class="login-card">
-    <div class="logo-circle">🎓</div>
+    <div class="logo-circle"><img src="../assets/img/smart-logo.png" alt="SMART Assessment System" class="brand-logo"></div>
     <h2>SMART Assessment System</h2>
     <p class="subtitle">Please enter your credentials to continue</p>
 

@@ -72,5 +72,17 @@
     </div>
 </div>
 
+<?php if (isset($_GET['error'])): ?>
+    <script>
+        const error = "<?php echo $_GET['error']; ?>";
+        if (error === "exists") {
+            alert("This email is already registered.");
+        } else if (error === "failed") {
+            alert("Unable to complete registration right now. Please try again.");
+        }
+        window.history.replaceState({}, document.title, window.location.pathname);
+    </script>
+<?php endif; ?>
+
 </body>
 </html>

@@ -30,6 +30,7 @@ $classes = $conn->query("
 <head>
     <meta charset="UTF-8">
     <title>Teacher Dashboard - SMART</title>
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <link rel="stylesheet" href="/assessment_system/assets/css/style.css?v=<?php echo time(); ?>">
     <style>
         body.teacher-layout {
@@ -108,8 +109,9 @@ $classes = $conn->query("
 <body class="teacher-layout">
 
     <nav class="top-nav">
-        <div style="font-weight:800; font-size:20px; color:var(--text-dark);">
-            <span style="color:var(--primary-green);">🎓</span> SMART Assessment System
+        <div class="brand-lockup" style="font-weight:800; font-size:20px; color:var(--text-dark);">
+            <img src="../assets/img/smart-logo.png" alt="SMART Assessment System" class="brand-logo">
+            <span>SMART Assessment System</span>
         </div>
         <div style="display:flex; align-items:center; gap:20px;">
             <span style="font-weight:600;"><?php echo htmlspecialchars($name); ?></span>

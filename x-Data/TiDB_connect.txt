@@ -1,0 +1,32 @@
+Host - gateway01.ap-southeast-1.prod.aws.tidbcloud.com
+Port - 4000
+Username - 2WrTXsJnMabKqyw.root
+Password - HR33jqhoNHUIsaYC
+Database name - performance_assessment_db
+
+DB_PORT = 4000
+DB_NAME = assessment_db
+
+Name: smart-assessment-system
+Branch: main
+Root Directory: leave blank
+Environment: Docker
+DB_HOST = gateway01.ap-southeast-1.prod.aws.tidbcloud.com
+DB_USER = 2WrTXsJhMabKgYw.root
+DB_PASS = your TiDB database password
+DB_NAME = performance_assessment_db
+DB_PORT = 4000
+
+
+"C:\xampp2\mysql\bin\mysql.exe" -h gateway01.ap-southeast-1.prod.aws.tidbcloud.com -P 4000 -u 2WrTXsJnMabKqyw.root -p --ssl
+SHOW DATABASES;
+USE performance_assessment_db;
+source C:/xampp2/htdocs/assessment_system/x-Data/assessment_db_final.sql;
+SHOW TABLES;
+
+
+
+DROP DATABASE performance_assessment_db;
+CREATE DATABASE performance_assessment_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE performance_assessment_db;
+source C:/xampp2/htdocs/assessment_system/x-Data/assessment_db_final.sql;

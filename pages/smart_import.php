@@ -60,6 +60,10 @@ $upload_status = $_GET['upload'] ?? '';
 
     <?php if ($upload_status === 'invalid_file'): ?>
         <div class="notice error">Please choose a valid CSV file before uploading.</div>
+    <?php elseif ($upload_status === 'missing_year'): ?>
+        <div class="notice error">No active academic year is configured.</div>
+    <?php elseif ($upload_status === 'failed'): ?>
+        <div class="notice error">Upload failed. Please try again.</div>
     <?php endif; ?>
 
     <div class="card">

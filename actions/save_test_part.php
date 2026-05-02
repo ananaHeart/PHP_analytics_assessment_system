@@ -45,7 +45,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         exit();
     } else {
-        echo "Error: " . $conn->error;
+        header("Location: ../pages/manage_test_parts.php?test_id=$test_id&msg=error");
+        exit();
     }
 }
 ?>

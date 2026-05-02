@@ -335,6 +335,7 @@ function fmt_rate($rate) {
 <head>
     <meta charset="UTF-8">
     <title>School Assessment Analytics - SMART</title>
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <link rel="stylesheet" href="../assets/css/style.css?v=<?php echo time(); ?>">
     <style>
         body { background: #f5f6fa; }

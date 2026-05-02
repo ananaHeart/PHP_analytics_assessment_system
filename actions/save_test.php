@@ -63,6 +63,7 @@ if ($conn->query($sql)) {
     header("Location: ../pages/manage_test_parts.php?test_id=" . $test_id);
     exit();
 } else {
-    echo "Error: " . $conn->error;
+    header("Location: ../pages/create_test.php?class_id=" . urlencode((string) $class_id) . "&msg=error");
+    exit();
 }
 ?>
