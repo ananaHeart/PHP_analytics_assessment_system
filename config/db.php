@@ -1,8 +1,7 @@
 <?php
-$isRender = getenv("RENDER") || getenv("RENDER_SERVICE_ID");
+$isRender = getenv("RENDER") || getenv("RENDER_SERVICE_ID") || getenv("DB_HOST");
 
 if ($isRender) {
-    // Render + TiDB Cloud
     $host = getenv("DB_HOST");
     $user = getenv("DB_USER");
     $password = getenv("DB_PASS");
@@ -18,8 +17,7 @@ if ($isRender) {
             throw new Exception("mysqli_init failed");
         }
 
-        // Enable SSL/TLS for TiDB Cloud without requiring a local PEM bundle.
-        mysqli_ssl_set($conn, null, null, null, null, null);
+        mysqli_ssl_set($conn, NULL, NULL, NULL, NULL, NULL);
 
         mysqli_real_connect(
             $conn,
@@ -27,25 +25,26 @@ if ($isRender) {
             $user,
             $password,
             $dbname,
-            (int) $port,
-            null,
+            (int)$port,
+            NULL,
             MYSQLI_CLIENT_SSL
         );
 
         $conn->set_charset("utf8mb4");
+
     } catch (Exception $e) {
         error_log("Database connection failed: " . $e->getMessage());
         die("Database connection failed. Please contact the system administrator.");
     }
+
 } else {
-    // Local XAMPP
     $host = "localhost";
     $user = "root";
     $password = "";
     $dbname = "assessment_db";
     $port = 3306;
 
-    $conn = new mysqli($host, $user, $password, $dbname, (int) $port);
+    $conn = new mysqli($host, $user, $password, $dbname, (int)$port);
 
     if ($conn->connect_error) {
         die("Database connection failed: " . $conn->connect_error);
