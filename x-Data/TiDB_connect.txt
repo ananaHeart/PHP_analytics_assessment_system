@@ -1,7 +1,9 @@
+MyTiDB = analyticsassessmentdb2
+
 Host - gateway01.ap-southeast-1.prod.aws.tidbcloud.com
 Port - 4000
 Username - 2WrTXsJnMabKqyw.root
-Password - HR33jqhoNHUIsaYC
+Password - 
 Database name - performance_assessment_db
 
 DB_PORT = 4000
@@ -13,7 +15,7 @@ Root Directory: leave blank
 Environment: Docker
 DB_HOST = gateway01.ap-southeast-1.prod.aws.tidbcloud.com
 DB_USER = 2WrTXsJhMabKgYw.root
-DB_PASS = your TiDB database password
+DB_PASS = HR33jqhoNHUIsaYC
 DB_NAME = performance_assessment_db
 DB_PORT = 4000
 
