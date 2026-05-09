@@ -253,6 +253,12 @@ if ($lms_res) {
 
 $activity_date_expr = $has_test_date ? 't.test_date' : ($has_created_at ? 't.created_at' : 'NULL');
 $activity_order = $has_test_date ? 't.test_date DESC, t.test_id DESC' : ($has_created_at ? 't.created_at DESC, t.test_id DESC' : 't.test_id DESC');
+$activity_group_by = 't.test_id, t.test_name, u.first_name, u.last_name';
+if ($has_test_date) {
+    $activity_group_by .= ', t.test_date';
+} elseif ($has_created_at) {
+    $activity_group_by .= ', t.created_at';
+}
 
 $activity_sql = "
     SELECT
@@ -269,7 +275,7 @@ $activity_sql = "
     JOIN grade_level gl ON sec.grade_level_id = gl.grade_level_id
     JOIN subject subj ON c.subject_id = subj.subject_id
     WHERE 1=1 $filter_clause $completed_test_clause
-    GROUP BY t.test_id
+    GROUP BY $activity_group_by
     ORDER BY $activity_order
     LIMIT 5
 ";
@@ -283,6 +289,13 @@ if ($activity_res) {
 }
 
 $trend_order = $has_test_date ? 't.test_date ASC, t.test_id ASC' : ($has_created_at ? 't.created_at ASC, t.test_id ASC' : 't.test_id ASC');
+$trend_group_by = 't.test_id, t.test_name';
+if ($has_test_date) {
+    $trend_group_by .= ', t.test_date';
+} elseif ($has_created_at) {
+    $trend_group_by .= ', t.created_at';
+}
+
 $trend_sql = "
     SELECT
         t.test_name,
@@ -301,7 +314,7 @@ $trend_sql = "
         GROUP BY test_id
     ) totals ON t.test_id = totals.test_id
     WHERE totals.total_items > 0 $filter_clause $completed_test_clause
-    GROUP BY t.test_id
+    GROUP BY $trend_group_by
     ORDER BY $trend_order
 ";
 $trend_res = execute_prepared_query($conn, $trend_sql, $filter_types, $filter_params);
